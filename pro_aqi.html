@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Uploding File 
+		</title>
+	</head>
+	<style>
+		body{
+			background-image:url("https://images.unsplash.com/photo-1488330890490-c291ecf62571?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&w=1000&q=80");
+			background-size:cover;
+		}
+		input{background-color:rgba(255,255,100,0.3);padding:3px;color:yellow;}
+		table, th, td{ border:none;background-color:transperent; padding:10px;color:white;}
+		table{background:rgba(0,0,0,0.4);border-radius:5px;}
+		input:hover{background-color:rgba(100,50,10,0.5);}
+		#sub{margin-top:20px;width:250px;background-color:green;border:none;border-radius:5px;}
+		#sub:hover{color:white;background-color:orange;}
+		.header{font-size:30px;color:orange;text-shadow:1px,2px,5px,rgba(0,0,100,0.3);}
+		tr:hover{color:orange;background-color:rgba(0,0,0,0.5);}
+	</style>
+	<body>
+		<center>
+			<h3 class="header">Input file</h3>
+			<!-- <form>
+				<input type="file" id="upload" />
+			</form>		
+			<script type="text/javascript">
+				const input = document.getElementById('upload');
+				const link = document.getElementById('link');
+				let objectURL;
+
+				input.addEventListener('change', function () {
+				  if (objectURL) {
+				    // revoke the old object url to avoid using more memory than needed
+				    URL.revokeObjectURL(objectURL);  
+				  }
+
+				  const file = this.files[0];
+				  objectURL = URL.createObjectURL(file);
+
+				  link.href = objectURL;
+				  link.click();
+				});
+			</script>
+			<a id="link" download>link to your file (upload a file first)</a> -->
+			<!-- <input type="file" id="upload" />
+			<a id="link" download style="display: none">shouldnt be visible</a> -->
+		</center>
+		<center>
+			<table style="width:75%">
+				<caption style="text-align:center">Input Parameters</caption>
+				<tr>
+			    <th>PT08.S1(CO)</th>
+			    <th>NMHC(GT)</th>
+			    <th>C6H6(GT)</th>
+			    <th>PT08.S2(NMHC)</th>	    
+			  </tr>
+			  <tr>
+			  	<td style="text-align:center">
+			    	<form>
+						<input type="text" id="PT08.S1" name="PT08.S1"/>
+					</form>	
+			    </td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="NMHC(GT)" name="NMHC(GT)"/>
+					</form>	</td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="C6H6(GT)" name="C6H6(GT)"/>
+					</form>	</td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="PT08.S2(NMHC)" name="PT08.S2(NMHC)"/>
+					</form>	</td>
+			  </tr>
+			  <tr>
+			  	<th>NOx(GT)</th>
+			    <th>PT08.S3(NOx)</th>
+			    <th>NO2(GT)</th>
+			    <th>PT08.S4(NO2)</th>	
+			  </tr>
+			  <tr>
+			  	<td style="text-align:center">
+					<form>
+						<input type="text" id="NOx(GT)" name="NOx(GT)"/>
+					</form>	</td>
+				<td style="text-align:center">
+			    	<form>
+						<input type="text" id="PT08.S3(NOx)" name="PT08.S3(NOx)"/>
+					</form>	
+			    </td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="NO2(GT)" name="NO2(GT)"/>
+					</form>	</td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="PT08.S4(NO2)" name="PT08.S4(NO2)"/>
+					</form>	</td>
+			  </tr>
+			  <tr>
+			  	<th>PT08.S5(O3)</th>
+			    <th>T</th>
+			    <th>RH</th>
+			    <th>AH</th></tr>
+			    <tr>
+			    	<td style="text-align:center">
+			    	<form>
+						<input type="text" id="PT08.S5(O3)" name="PT08.S5(O3)"/>
+					</form>	
+			    </td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="T" name="T"/>
+					</form>	</td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="RH" name="RH"/>
+					</form>	</td>
+				<td style="text-align:center">
+			    	<form>
+						<input type="text" id="AH" name="AH"/>
+					</form>	
+			    </td>
+			    </tr>
+			  <tr>
+			  	<th>YEAR</th>
+			    <th>MONTH</th>
+			    <th>DATE</th>
+			    <th>TIME</th></tr>
+			  <tr>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="YEAR" name="YEAR"/>
+					</form>	</td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="MONTH" name="MONTH"/>
+					</form>	</td>
+				<td style="text-align:center">
+			    	<form>
+						<input type="text" id="DATE" name="DATE"/>
+					</form>	
+			    </td>
+			    <td style="text-align:center">
+					<form>
+						<input type="text" id="TIME" name="TIME"/>
+					</form>	</td>
+			  </tr>
+			</table>
+		</center>
+		<center>
+			<button id="sub" style="padding: 10px;" type="button" onclick="window.location.href= 'http://127.0.0.1:5000/output';">Submit</button>
+		</center>
+		<p> {{t,ah,rh}} </p>
+<!-- <form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="firstname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lastname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>  -->
+	</body>
+</html>
